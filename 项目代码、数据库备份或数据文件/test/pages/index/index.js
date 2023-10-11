@@ -1,0 +1,170 @@
+//index.js
+//获取应用实例
+const app = getApp()
+
+Page({
+  data: {
+    jumpbtn:function (params) {
+      wx.navigateTo({
+        url: '/pages/shoppinglist/shoppinglist.wxml',
+      }) 
+    },
+    // 轮播图图片
+    imgUrls:[
+      '/images/02.jpg',
+      '/images/03.jpg',
+      '/images/04.jpg',
+      '/images/05.jpg'
+    ],
+    //导航栏图片
+    cateList:[
+      {
+        name:"充值优惠",
+        image_src:'/images/youhui.png',
+        navigator_url:'pages/index'
+    },
+    {
+       name:"签到积分",
+       image_src:'/images/qiandao.png',
+       navigator_url:'pages/index'
+    },
+    {
+      name:"活动专区",
+      image_src:'/images/huodong.png',
+      navigator_url:'pages/index'
+    },
+    {
+      name:"店铺福利",
+      image_src:'/images/fuli.png',
+      navigator_url:'pages/index' 
+    }
+    ],
+    //新品系列之三大系列
+    threeList:[
+      {
+        id:'01',
+        name:"了解更多",
+        image_src:'/images/07.jpg',
+    },
+    {
+       id:'02',
+       name:"了解更多",
+       image_src:'/images/08.jpg',
+    },
+    {
+      id:'03',
+      name:"了解更多",
+      image_src:'/images/09.jpg',
+    }
+    ],
+    //新品系列之店铺排行
+    topList:[
+      {
+        image_src:'/images/top1.jpg',
+        image_src1:'/images/shoppinglist0.png',
+        navigator_url:'pages/index'
+    },
+    {
+       image_src:'/images/top2.jpg',
+       image_src1:'/images/shoppinglist0.png',
+       navigator_url:'pages/index'
+    },
+    {
+      image_src:'/images/top3.jpg',
+      image_src1:'/images/shoppinglist0.png',
+      navigator_url:'pages/index'
+    },
+    {
+      image_src:'/images/top4.jpg',
+      image_src1:'/images/shoppinglist0.png',
+      navigator_url:'pages/index'
+    }
+    ],
+    //新品系列之店铺排行
+    oldList:[
+    {
+      image_src:'/images/old1.jpg',
+    },
+    {
+      image_src:'/images/old2.jpg',
+    },
+    {
+      image_src:'/images/old3.jpg',
+    },
+    {
+      image_src:'/images/old4.jpg',
+    },
+    {
+      image_src:'/images/old5.jpg',
+    },
+    {
+      image_src:'/images/old6.jpg',
+    },
+    {
+      image_src:'/images/old7.jpg',
+    }
+    ],
+    //猜你喜欢
+    guessList:[
+      {
+        image_src:'/images/q1.jpg',
+        data:"芍药璎珞堆金领衫",
+        price:"289.00"
+      }, 
+      {
+        image_src:'/images/q2.jpg',
+        data:"原创明制立领竖领翻领对襟套装",
+        price:"260.00"
+      },  
+      {
+        image_src:'/images/q3.jpg',
+        data:"蜜桃乌龙宋制百褶裙",
+        price:"158.00"
+      },
+      {
+        image_src:'/images/q4.jpg',
+        data:"栗仁燕麦秋冬明制圆领短袄",
+        price:"239.00"
+      },
+{
+     image_src:'/images/q5.jpg',
+     data:"新款优雅中国风连衣裙",
+     price:"￥289.00"
+},
+{
+    image_src:'/images/q6.jpg',
+    data:"立领斜襟盘扣亮片绣花蕾丝鱼尾旗袍裙",
+    price:"￥239.00"
+},
+{
+     image_src:'/images/q7.jpg',
+     data:"复古元宝领灯芯绒加厚保暖夹棉旗袍",
+     price:"￥398.00"
+},
+{
+    image_src:'/images/q8.jpg',
+    data:"长袖旗袍盘扣贴身知性优雅连衣裙",
+    price:"￥239.00"
+}
+   ]
+},
+threeBtn:function(e){
+  var $id = e.currentTarget.dataset.id;
+  console.log($id)
+  if ("01"== $id){
+    wx.switchTab({
+      url: '/pages/sort/sort',
+    })
+  }
+  if ("02" == $id) {
+    wx.switchTab({
+      url: '/pages/sort/sort',
+    })
+  }
+  if ("03" == $id) {
+    wx.switchTab({
+      url: '/pages/sort/sort',
+    })
+  }
+}
+})

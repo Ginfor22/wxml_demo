@@ -1,0 +1,10 @@
+<view class="container">
+  <view class='text-highlight'>
+    <text>◉48小时极速发货 　◉24小时无忧退款 　◉满248元免运费</text>
+  </view>
+  <view class="shop-cart-empty">
+    <image src="/images/empty.png"></image>
+    <text>购物车空空如也~</text>
+  </view>
+  <button class="buy-btn" hover-class="btn-hover" bindtap="buyBtn" style="width: 427rpx; height: 94rpx; display: flex; box-sizing: border-box; left: 0rpx; top: 0rpx"><text style="width: 293rpx; height: 68rpx; display: block; box-sizing: border-box">去逛逛</text></button>
+</view>

@@ -1,0 +1,9 @@
+<view class="allcon">
+  <image class="img" src="/images/loginbg.jpg"></image>
+  <view class="content">
+    <input placeholder="请输入用户名" class="input" bindinput="getName"/>
+    <input placeholder="请输入账号" class="input" bindinput="getZhangHao"/>
+    <input placeholder="请输入密码" class="input" bindinput="getMiMa"/>
+    <button bindtap="btnRegClick" class="register">注册</button>
+  </view> 
+</view>

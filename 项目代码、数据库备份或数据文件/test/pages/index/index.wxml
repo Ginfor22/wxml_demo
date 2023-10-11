@@ -1,0 +1,120 @@
+<!-- 搜索框 -->
+<searchbar isnavigator="{{true}}">
+</searchbar>
+<!-- 轮播图 -->
+<swiper indicator-color="white" indicator-active-color="#ca6924" indicator-dots autoplay interval="3500" duration="1000"  circular>
+  <swiper-item wx:for="{{imgUrls}}" wx:key="*this">
+    <image src="{{item}}" mode="aspectFill"/>
+  </swiper-item>
+</swiper>
+<!-- 内容区域 -->
+<view class="content">
+  <!--导航 -->
+  <view class="index_cate">
+    <navigator wx:for="{{cateList}}" wx:key="name">
+      <view>
+        <image mode="widthFix" src="{{item.image_src}}"></image>
+        <text>{{item.name}}</text>
+      </view>  
+    </navigator>
+  </view>
+  <!-- 简介区域 -->
+  <view class="introduce">
+    <image src="/images/11.jpg"></image> 
+  </view>
+  <!-- 新品系列 -->
+  <view class="new">
+    <!-- 新品系列LOGO -->
+    <view class="new-photo">
+      <image src="/images/new.jpg"/>
+      <h1>2023早春预上新</h1> 
+    </view>
+    <!-- 三大系列 -->
+    <view class="new-three">
+      <view class="three-sort" wx:for="{{threeList}}" wx:key="name" >
+      <view>
+        <image mode="widthFix" src="{{item.image_src}}"></image>
+        <span bindtap="threeBtn" data-id="{{item.id}}">{{item.name}}</span>
+      </view>  
+    </view>  
+    </view>
+    <!-- 新品展示 -->
+    <view class="new-show">
+      <!-- 209.4 -->
+      <image src="/images/14.jpg"></image>
+      <view class="icon1" bindtap="jumpbtn">
+        <image src="/images/shoppinglist0.png"></image>
+      </view>
+      <!-- 195.1 -->
+      <image src="/images/18.jpg"></image>
+      <view class="icon2" bindtap="jumpbtn">
+        <image src="/images/shoppinglist0.png" style="position: relative; left: -200rpx; top: -1rpx"></image>
+      </view>
+      <!-- 165.4  139.9 -->
+      <view class="new-show-two">
+        <image src="/images/24.jpg"></image>
+        <view class="icon3" bindtap="jumpbtn">
+          <image src="/images/shoppinglist0.png"></image>
+        </view>
+        <image src="/images/27.jpg" style="position: relative; left: -2rpx; top: 2rpx; width: 375rpx; height: 540rpx; display: block; box-sizing: border-box"></image>
+        <view class="icon4" bindtap="jumpbtn">
+          <image src="/images/shoppinglist0.png"></image>
+        </view>
+      </view>
+      
+    </view>
+    <!-- 店铺排行 -->
+    <view class="new-top">
+      <h3>店铺TOP榜单</h3>
+      <h4>hot sales goods for you</h4>
+      <navigator wx:for="{{topList}}" wx:key="name">
+      <view>
+        <image mode="widthFix" src="{{item.image_src}}"></image>
+      </view>  
+      </navigator>
+
+    </view>
+    <!-- 往期新品系列 -->
+    <view class="old-new">
+      <h5>『2022暖冬系列』</h5>
+      <h6>WTZZ wide original girl brand.Young fast fashion brand,style line is a collection of Korean wind sports,Japanese retro,original interest three categories</h6>
+    </view>
+    <scroll-view class="image-group" scroll-x="true">
+      <image src="/images/old1.jpg"></image>
+      <image src="/images/old2.jpg"></image>
+      <image src="/images/old3.jpg"></image>
+      <image src="/images/old4.jpg"></image>
+      <image src="/images/old5.jpg"></image>
+      <image src="/images/old6.jpg"></image>
+      <image src="/images/old7.jpg"></image> 
+    </scroll-view>
+    <!-- 猜你喜欢 -->
+    <view class="guess-like">
+      <view class="guesslike-text">
+        <h7>------猜你喜欢------</h7>
+      </view>
+      
+    <view class="shangpin" wx:for="{{guessList}}">
+        <image src='{{item.image_src}}'></image>
+        <view class="like-text">
+          <text>{{item.data}}</text>
+        </view>
+        <view class="like-price">
+          <text>{{item.price}}</text>
+        </view>  
+        <view class="icon" bindtap="jumpbtn">
+         <image src="/images/shoppinglist0.png"></image>
+        </view>   
+    </view>
+    </view>
+    </view>
+</view>
+
+
+
+
+
+
+
+
+

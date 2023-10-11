@@ -1,0 +1,76 @@
+<!-- 全局 -->
+<view class="userinfo">
+    <!-- 顶部盒子 -->
+    <view class="top">
+       <view class="avatar">
+         <view wx:if="{{!login}}">     
+         <image style="border-radius:50%;" src="{{userinfo.avatarUrl ? userinfo.avatarUrl:'/images/touxiang.jpg'}}"></image>
+         <view class="text">
+           <navigator url="../login/login">
+           <text wx:if="{{userinfo.nickName}}">{{userinfo.nickName}}</text>
+           <text wx:else bindtap="toLogin">乌拉</text> 
+           </navigator>
+         </view>
+         </view>
+        <view wx:else>
+        <image style="border-radius:50%;" src="{{userinfo.avatarUrl ? userinfo.avatarUrl:'/images/touxiang.jpg'}}"></image>
+        <view class="text">
+           <navigator url="../login/login">
+           <text wx:if="{{userinfo.nickName}}">{{userinfo.nickName}}</text>
+           <text wx:else bindtap="toLogin">丁走走</text> 
+           </navigator>
+         </view>  
+         </view>
+       </view>
+
+      <view class="text-item">
+        <view class="text-one">
+          <text space="&nbsp" decode="{{true}}">&nbsp;0 \n</text>
+          <text>足迹</text>
+        </view>
+        <view class="text-two">
+          <text space="&nbsp" decode="{{true}}">&nbsp;&nbsp;1 \n</text>
+          <text>优惠券</text>
+        </view>
+        <view class="text-three">
+          <text space="&nbsp" decode="{{true}}">&nbsp;0 \n</text>
+          <text>积分</text>
+        </view>
+      </view>  
+    </view>
+    <!-- 中间盒子 -->
+    <view class="middle">
+      <view class="order" catchtap="toOrder"> 
+        <text class="myorder-text">我的订单</text>
+        <text class="myorderlook-text" bindtap="allOrderBtn">查看全部订单 ></text>
+      </view>
+      <view class="navs">
+      <block wx:for-items="{{orderItems}}" wx:key="name">
+         <view class="nav-item" bindtap="toOrder" data-type="{{item.name}}" data-id="{{item.id}}">
+          <image src="{{item.imageurl}}" class="nav-image" />
+          <text>{{item.name}}</text>
+         </view>
+      </block>
+      </view>
+    </view>
+    <!-- 底部盒子 --> 
+    <view class="bottom">
+    <view class="alllists">
+      <block wx:for="{{menuitems}}" wx:key="menu_for">
+        <navigator url="{{item.url}}" class="lists">
+        <view class="content">
+          <view class="listtext" bindtap="fourBtn" data-id="{{item.id}}">{{item.text}}</view>
+          <view class="arrows">
+            <image src="{{item.arrows}}"></image>
+          </view>
+        </view>
+        </navigator> 
+        <!-- 分割线 -->
+        <view class="divLine"></view>
+      </block>
+    </view>
+  </view>
+
+</view>
+  
+  

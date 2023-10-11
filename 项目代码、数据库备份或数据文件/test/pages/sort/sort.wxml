@@ -1,0 +1,122 @@
+<!-- 搜索框 -->
+<searchbar isnavigator="{{true}}">
+</searchbar>
+<!-- 内容区域 -->
+<view class="page">
+  <!--顶部导航栏-->
+  <view class="swiper-tab">  
+      <view class="majorCon">
+      <navigator class="box" url="#">
+         <view class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">全部</view>
+      </navigator>
+      <navigator class="box" url="#">
+         <view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">玫瑰乌木</view>
+      </navigator> 
+      <navigator class="box" url="#">
+         <view class="tab-item {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">印金彩绘</view>
+      </navigator>
+      <navigator class="box" url="#">
+         <view class="tab-item {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">春花秋月</view>
+      </navigator>
+      <navigator class="box" url="#">
+         <view class="tab-item {{currentTab==4 ? 'on' : ''}}" data-current="4" bindtap="swichNav">梅竹双清</view>
+      </navigator>
+     </view>
+  </view>
+  <!--内容主体-->
+  <swiper class="swiper" current="{{currentTab}}" duration="200" bindchange="swiperChange">
+    <swiper-item>
+      <view class="swiper-one">
+      <view class="shangpin" wx:for="{{allList}}">
+        <navigator open-type="navigate" url="/pages/gooddetails/gooddetails?src={{item.image_src}}&data={{item.data}}&price={{item.price}}" >
+        <image src='{{item.image_src}}'></image>
+        </navigator>
+        <view class="like-text">
+          <text>{{item.data}}</text>
+        </view>
+        <view class="like-price">
+          <text>￥{{item.price}}</text>
+        </view>  
+        <view class="icon" bindtap="jumpbtn">
+         <image src="/images/shoppinglist0.png"></image>
+        </view>   
+        </view>
+        </view>
+    </swiper-item>
+
+
+    <swiper-item>
+      <view class="swiper-two">
+      <view class="shangpin" wx:for="{{zsList}}">
+        <navigator open-type="navigate" url="/pages/gooddetails/gooddetails?src={{item.image_src}}&data={{item.data}}&price={{item.price}}" >
+        <image src='{{item.image_src}}'></image>
+        </navigator>
+        <view class="like-text">
+          <text>{{item.data}}</text>
+        </view>
+        <view class="like-price">
+          <text>{{item.price}}</text>
+        </view>  
+        <view class="icon" bindtap="jumpbtn">
+         <image src="/images/shoppinglist0.png"></image>
+        </view>   
+        </view>
+        </view>
+    </swiper-item>
+    <swiper-item>
+      <view class="swiper-three">
+      <view class="shangpin" wx:for="{{qzList}}">
+        <navigator open-type="navigate" url="/pages/gooddetails/gooddetails?src={{item.image_src}}&data={{item.data}}&price={{item.price}}" >
+        <image src='{{item.image_src}}'></image>
+        </navigator>
+        <view class="like-text">
+          <text>{{item.data}}</text>
+        </view>
+        <view class="like-price">
+          <text>{{item.price}}</text>
+        </view>  
+        <view class="icon" bindtap="jumpbtn">
+         <image src="/images/shoppinglist0.png"></image>
+        </view>   
+        </view>
+        </view>
+    </swiper-item>
+    <swiper-item>
+      <view class="swiper-four">
+      <view class="shangpin" wx:for="{{fgList}}">
+        <navigator open-type="navigate" url="/pages/gooddetails/gooddetails?src={{item.image_src}}&data={{item.data}}&price={{item.price}}" >
+        <image src='{{item.image_src}}'></image>
+        </navigator>
+        <view class="like-text">
+          <text>{{item.data}}</text>
+        </view>
+        <view class="like-price">
+          <text>{{item.price}}</text>
+        </view>  
+        <view class="icon" bindtap="jumpbtn">
+         <image src="/images/shoppinglist0.png"></image>
+        </view>   
+        </view>
+        </view>
+    </swiper-item>
+    <swiper-item>
+      <view class="swiper-five">
+      <view class="shangpin" wx:for="{{hyList}}">
+        <navigator open-type="navigate" url="/pages/gooddetails/gooddetails?src={{item.image_src}}&data={{item.data}}&price={{item.price}}" >
+        <image src='{{item.image_src}}'></image>
+        </navigator>
+        <view class="like-text">
+          <text>{{item.data}}</text>
+        </view>
+        <view class="like-price">
+          <text>{{item.price}}</text>
+        </view>  
+        <view class="icon" bindtap="jumpbtn">
+         <image src="/images/shoppinglist0.png"></image>
+        </view>   
+        </view>
+        </view>
+    </swiper-item>
+  </swiper>
+</view>
+

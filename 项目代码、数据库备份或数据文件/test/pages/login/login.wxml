@@ -1,0 +1,28 @@
+<!--pages/login/login.wxml-->
+<view class='allcon'>
+  <view class="login-icon"> 
+    <image class="login-img" src="/images/loginbg.jpg" style="width: 755rpx; height: 523rpx; display: inline-block; box-sizing: border-box"></image> 
+  </view> 
+<view class='loginfrom'>
+<view class='login' style="position: relative; left: 1rpx; top: 111rpx">
+<image class='img' src='/images/name.png'></image>
+<label class='loginname'>账号</label>
+<input model:value="{{username}}" class='inputName' name="phone" type='text' placeholder='请输入手机号' bindinput='getZhangHao' maxlength='11'></input>
+</view>
+<view class='line'></view>
+<view class='pwd' style="position: relative; left: 0rpx; top: 111rpx">
+<image class='img' src='/images/key.png'></image>
+<label class='loginname'>密码</label>
+<input model:value="{{password}}" class='inputPwd' name="password" placeholder='请输入密码' type='password' bindinput='getMiMa' ></input>
+</view>
+</view>
+  <view class='btn'>
+  <button class='loginbtn' type='primary' plain="{{plain}}" disabled="{{disabled}}" bindtap="login" hover-class="btn-hover" style="width: 528rpx; height: 106rpx; display: flex; box-sizing: border-box; left: -1rpx; top: 127rpx; position: relative"><text style="width: 432rpx; height: 97rpx; display: block; box-sizing: border-box; position: relative; left: -9rpx; top: -4rpx">登录</text></button>
+  </view>
+  <navigator url="../register/register">
+  <view class='btn'>
+  <button class='registerbtn' type='primary' plain="{{plain}}" disabled="{{disabled}}" bindtap="register" hover-class="btn-hover" style="width: 523rpx; height: 111rpx; display: flex; box-sizing: border-box; left: -1rpx; top: 143rpx; position: relative"><text>注册</text></button>
+  </view>
+</navigator>  
+</view>
+

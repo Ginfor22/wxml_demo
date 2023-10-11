@@ -1,0 +1,31 @@
+.allcon{
+  position: fixed;
+  background-color: #D3D3D3;
+  width: 100%;  
+  height:100%;
+  } 
+.img{
+  width: 100%;
+  height: 400rpx;
+  position: fixed;
+  z-index: -1;
+}
+.content{
+  padding-top: 420rpx;
+}
+.input{
+  border: 1rpx solid #ffffff;
+  background-color: #ffffff;
+  width: 480rpx;
+  height: 50rpx;
+  padding: 20rpx;
+  margin: 20rpx;
+  margin-left: 130rpx;
+  border-radius: 20rpx;
+}
+.register{
+  margin: 40rpx;
+  border-radius: 50rpx;
+  background-color: #ca6924;
+  color:#ffffff;
+}
